@@ -16,10 +16,10 @@ comments: true
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
-# 레시피 검색 프로그램
+#레시피 검색 프로그램
 
 
-### 프로그램 설명
+###프로그램 설명
 
 사용자가 선택한 재료들을 바탕으로 만들 수 있는 요리법을 검색해서 보여주는 PC용 프로그램.  **This is strong**.
 
