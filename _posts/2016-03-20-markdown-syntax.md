@@ -21,40 +21,25 @@ comments: true
 
 ## 프로그램 세부 기능
 
-![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
-{: .image-right}
-
 위의 화면은 프로그램 시작화면이다. 왼쪽 파랑색 상자 안에는 프로그램의 사용방법이 적혀있다. 사용자가 음식 재료를 선택하고 검색버튼을 누르게 되면 거기에 해당하는 레시피가 등록된 웹사이트 주소들이 나온다. 음식재료는 빨간색 상자 안의 체크박스 또는 검색란을 이용하여 선택할 수 있다. 북마크 기능을 사용하여 
 
-![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
-{: .image-right}
 
 또한, 이 UI는 “F-Shaped Pattern” 기반으로 만들었다. F-shaped Pattern이란, HCI (Human- computer interaction) 분야에 기반한, 이론인데, 일반적인 사용자는 먼저 콘텐츠 영역의 상부에 걸쳐 수평 이동에서 판독하고, 이 초기 요소는 F의 상단 막대를 형성한다는 이론이다. 이 프로그램 또한, F-shaped pattern에 기반하여 콘텐츠 내용은 왼쪽에, 체크박스는 오른쪽에 배치했다.
-
-![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
-{: .image-right}
 
  그리고 프로그램의 배경색, 제목색, 설명색이 조금씩 다르다. 이는 당연히 잘 보이게 하기
 위함이지만, 사용자의 눈에 피로가 덜 가게 하기 위해, 그러한 색깔들 그리고 서로간의 보색작용을 일으키는 색깔들을 사용하였다. 이러한 색깔, 패턴을 바탕으로 한 UI 안에 세부기능들이 삽입되어 있다.
 
 ## 북마크 기능
 
-![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
-{: .image-right}
-
 
  북마크 기능은 핵심적이다. 사용자가 마음에 드는 웹을 발견 했다면, 북마크 버튼을 눌러, 자신의 북마크 데이터 베이스에 삽입할 수 있다. 또한 데이터 베이스에 삽입할 때, 북마크 이름을 자신이 원하는 데로 적을 수 있다. (초기 북마크 이름은 북마크 주소와 동일하다)
  
- ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
-{: .image-right}
- 
+
  그렇게 하여 삽입한 후에, 북마크 보기를 누르면 자신이 넣은 웹 주소와 웹 주소를 찾을 때, 체크한 재료들 그리고 자신이 입력한 제목을 볼 수 있는 다이얼로그가 뜬다. 그리고 이 리스트박스는 체크하여 북마크 열기와 삭제가 가능하다. 북마크 스키마는 다음과 같다.
  
  
 ## 프로그램 동작 설명
  
- ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
-{: .image-right}
 
 처음에 검색 버튼을 클릭하면, NAVER OPEN API에 쿼리문을 날려 검색 결과를 요청한다.
 그리고 본인 컴퓨터에 있는 MYSQL DATABASE에도 쿼리문을 날려, 유사 재료를 사용한 북마크 결과값이 있는 지 요청한다.
@@ -64,8 +49,31 @@ comments: true
 좀 더 자세한 설명을 하자면 OPEN API에 쿼리문을 만드는 방법은 다음과 같다.
  (설명을 돕기 위해 불가피하게 소스를 삽입하였습니다.)
 
- ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
-{: .image-right}
+**CStringA link = "http://openapi.naver.com/search?key=c23527c307de03e239bc5b14dd42389e&query=";
+	CStringA linkB = "&display=10&start=1";
+	CStringA linkC= "&target=blog&sort=sim";
+	CStringA linkPage;
+	CStringA query = "";
+	m_sql_query = "";	
+
+	for(int i = IDC_chkGochujang; i <= IDC_chkOnion; i++)
+		if( ( (CButton*)GetDlgItem(i) )->GetCheck() == BST_CHECKED ) {
+			this->GetDlgItem(i)->GetWindowTextA(str);
+			query += str + " ";
+			sql_add(m_sql_query, str); //쿼리문을 만드는 함수입니다.
+		}
+
+		UpdateData(true);
+		query += m_edtAdd;
+
+                 if(query != "")
+			query += "레시피";
+		if(button_status == 0)
+			start = 1;
+		linkPage.Format("%d",start);
+
+link = link + query + linkB + linkPage +linkC;**
+
 
 위의 소스는 open api를 이용하기 위한 소스 인데, 원하는 음식재료를 query문에 합치는 방법이다. query에는 체크박스에서 누른 재료들이 추가된다. 또, linkPage는 체크한 재료가 없다면 아무 것도 뜨지 않도록 하기 위해 설정하였다. 또 MYSQL DATABASE에도 날릴 쿼리문 위에서 작성하였는데 그 변수는 m_sql_query이다.
 
