@@ -16,14 +16,14 @@ comments: true
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
-#레시피 검색 프로그램
+# 레시피 검색 프로그램
 
 
-###프로그램 설명
+### 프로그램 설명
 
 사용자가 선택한 재료들을 바탕으로 만들 수 있는 요리법을 검색해서 보여주는 PC용 프로그램.  **This is strong**.
 
-###프로그램 세부 기능
+### 프로그램 세부 기능
 
 ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
 {: .image-right}
@@ -41,8 +41,22 @@ Below is just about everything you'll need to style in the theme. Check the sour
  그리고 프로그램의 배경색, 제목색, 설명색이 조금씩 다르다. 이는 당연히 잘 보이게 하기
 위함이지만, 사용자의 눈에 피로가 덜 가게 하기 위해, 그러한 색깔들 그리고 서로간의 보색작용을 일으키는 색깔들을 사용하였다. 이러한 색깔, 패턴을 바탕으로 한 UI 안에 세부기능들이 삽입되어 있다.
 
-###북마크 기능
+### 북마크 기능
 
+![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
+{: .image-right}
+
+
+ 북마크 기능은 핵심적이다. 사용자가 마음에 드는 웹을 발견 했다면, 북마크 버튼을 눌러, 자신의 북마크 데이터 베이스에 삽입할 수 있다. 또한 데이터 베이스에 삽입할 때, 북마크 이름을 자신이 원하는 데로 적을 수 있다. (초기 북마크 이름은 북마크 주소와 동일하다)
+ 
+ ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
+{: .image-right}
+ 
+ 그렇게 하여 삽입한 후에, 북마크 보기를 누르면 자신이 넣은 웹 주소와 웹 주소를 찾을 때, 체크한 재료들 그리고 자신이 입력한 제목을 볼 수 있는 다이얼로그가 뜬다. 그리고 이 리스트박스는 체크하여 북마크 열기와 삭제가 가능하다. 북마크 스키마는 다음과 같다.
+ 
+ 
+ ### 프로그램 동작 설명
+ 
 *This is emphasized*. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
 
 HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.
