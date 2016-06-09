@@ -5,7 +5,7 @@
 **[Moon](http://taylantatli.github.io/Moon)** is a minimal, one column jekyll theme.
 
 ## Features
-* Minimal, you can focus on your content
+* Minimal,
 * Responsive
 * Disqus integration
 * Syntax highlighting
