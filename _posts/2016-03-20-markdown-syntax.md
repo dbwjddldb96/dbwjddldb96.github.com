@@ -55,7 +55,7 @@ Below is just about everything you'll need to style in the theme. Check the sour
  그렇게 하여 삽입한 후에, 북마크 보기를 누르면 자신이 넣은 웹 주소와 웹 주소를 찾을 때, 체크한 재료들 그리고 자신이 입력한 제목을 볼 수 있는 다이얼로그가 뜬다. 그리고 이 리스트박스는 체크하여 북마크 열기와 삭제가 가능하다. 북마크 스키마는 다음과 같다.
  
  
- ### 프로그램 동작 설명
+### 프로그램 동작 설명
  
 *This is emphasized*. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
 
