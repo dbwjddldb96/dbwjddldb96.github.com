@@ -12,18 +12,14 @@ tag:
 comments: true
 ---
 
-## HTML Elements
-
-Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
-
 # 레시피 검색 프로그램
 
 
-### 프로그램 설명
+## 프로그램 설명
 
 사용자가 선택한 재료들을 바탕으로 만들 수 있는 요리법을 검색해서 보여주는 PC용 프로그램.  **This is strong**.
 
-### 프로그램 세부 기능
+## 프로그램 세부 기능
 
 ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
 {: .image-right}
@@ -41,7 +37,7 @@ Below is just about everything you'll need to style in the theme. Check the sour
  그리고 프로그램의 배경색, 제목색, 설명색이 조금씩 다르다. 이는 당연히 잘 보이게 하기
 위함이지만, 사용자의 눈에 피로가 덜 가게 하기 위해, 그러한 색깔들 그리고 서로간의 보색작용을 일으키는 색깔들을 사용하였다. 이러한 색깔, 패턴을 바탕으로 한 UI 안에 세부기능들이 삽입되어 있다.
 
-### 북마크 기능
+## 북마크 기능
 
 ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
 {: .image-right}
@@ -55,12 +51,34 @@ Below is just about everything you'll need to style in the theme. Check the sour
  그렇게 하여 삽입한 후에, 북마크 보기를 누르면 자신이 넣은 웹 주소와 웹 주소를 찾을 때, 체크한 재료들 그리고 자신이 입력한 제목을 볼 수 있는 다이얼로그가 뜬다. 그리고 이 리스트박스는 체크하여 북마크 열기와 삭제가 가능하다. 북마크 스키마는 다음과 같다.
  
  
-### 프로그램 동작 설명
+## 프로그램 동작 설명
  
-*This is emphasized*. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+ ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
+{: .image-right}
 
-HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.
+처음에 검색 버튼을 클릭하면, NAVER OPEN API에 쿼리문을 날려 검색 결과를 요청한다.
+그리고 본인 컴퓨터에 있는 MYSQL DATABASE에도 쿼리문을 날려, 유사 재료를 사용한 북마크 결과값이 있는 지 요청한다.
+이렇게 요청한 값들을 모두 HTML 언어로 변환하여 사용자가 쉽게 알아볼 수 있도록 한다.
+그리고 이 값을 통해 쉽게 navigate함수를 사용할 수 있도록, html파일로 저장한 후 (파일 입출력을 통하여) 저장된 파일을 인자 값으로 하여 navigate함수를 사용한다.
 
+좀 더 자세한 설명을 하자면 OPEN API에 쿼리문을 만드는 방법은 다음과 같다.
+ (설명을 돕기 위해 불가피하게 소스를 삽입하였습니다.)
+
+ ![Smithsonian Image](https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg)
+{: .image-right}
+
+위의 소스는 open api를 이용하기 위한 소스 인데, 원하는 음식재료를 query문에 합치는 방법이다. query에는 체크박스에서 누른 재료들이 추가된다. 또, linkPage는 체크한 재료가 없다면 아무 것도 뜨지 않도록 하기 위해 설정하였다. 또 MYSQL DATABASE에도 날릴 쿼리문 위에서 작성하였는데 그 변수는 m_sql_query이다.
+
+위와 같이 mysql에 접속한 후에, 
+
+**if (!mysql_real_connect(&mysql,MYSQL_HOST,MYSQL_USER,MYSQL_PWD,MYSQL_DB, MYSQL_PORT, 0, 0))
+	{
+		MessageBox(mysql_error(&mysql),MB_OK);
+		return "";
+	}
+	else
+		mysql_query(&mysql,"set names euckr"); //한글인식**
+		
 ### Blockquotes
 
 > Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
