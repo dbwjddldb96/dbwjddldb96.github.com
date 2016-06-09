@@ -69,8 +69,6 @@ comments: true
 
 위의 소스는 open api를 이용하기 위한 소스 인데, 원하는 음식재료를 query문에 합치는 방법이다. query에는 체크박스에서 누른 재료들이 추가된다. 또, linkPage는 체크한 재료가 없다면 아무 것도 뜨지 않도록 하기 위해 설정하였다. 또 MYSQL DATABASE에도 날릴 쿼리문 위에서 작성하였는데 그 변수는 m_sql_query이다.
 
-위와 같이 mysql에 접속한 후에, 
-
 **if (!mysql_real_connect(&mysql,MYSQL_HOST,MYSQL_USER,MYSQL_PWD,MYSQL_DB, MYSQL_PORT, 0, 0))
 	{
 		MessageBox(mysql_error(&mysql),MB_OK);
@@ -79,6 +77,43 @@ comments: true
 	else
 		mysql_query(&mysql,"set names euckr"); //한글인식**
 		
+위와 같이 mysql에 접속한 후에, 
+
+
+		
+**CStringA sql;
+MYSQL_ROW recordSet = NULL;	// mysql 의 행을 맡는다.
+MYSQL_RES *sql_res; // mysql의 결과를 받아온다
+
+        sql = CStringA(m_sql_query);
+
+	// 쿼리 요청
+
+	if(mysql_query(&mysql,sql)) {
+		MessageBox("쿼리 에러",MB_OK);
+		return "";
+	}
+
+	if((sql_res=mysql_store_result(&mysql))==NULL)
+		return "";
+
+	int index=0;
+	while((recordSet=mysql_fetch_row(sql_res))!=NULL)
+	{
+		title_data = recordSet[0];
+
+		temp = recordSet[1];
+		result = result + "<tr bgcolor=""#FFFFB3""><td>"+ "<a href = \"" + temp + "\">" + title_data + "</a></td></tr>" ;
+
+		temp = recordSet[2];
+		result = result + "<tr bgcolor=""#C6E8FF""><td>" +"사용된 재료 : "+temp +"</td></tr>";
+		index++;
+	}
+
+	result = result + "</table>";**
+	
+  받아온 변수를 sql에 String으로 저장한 다음에, mysql_query인자에 넣어, database에서 쿼리를 요청한다. 뒤에 소스들은, database에 유사 재료를 사용한 북마크 결과 값이 없으면 아무것도 출력하지 않고, 있으면 table(html형식으로)에 넣어 출력되게 한다. 
+	
 ### Blockquotes
 
 > Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
