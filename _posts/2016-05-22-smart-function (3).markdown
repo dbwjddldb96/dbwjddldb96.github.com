@@ -2,7 +2,7 @@
 layout: post
 title:  "Recipe Searching Program"
 categories: jekyll update
-img: art4.jpg
+img: art4.png
 ---
  
 
