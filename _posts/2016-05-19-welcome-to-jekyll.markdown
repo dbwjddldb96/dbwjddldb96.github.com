@@ -1,16 +1,26 @@
----
+﻿---
 layout: post
-title:  "자기소개서 ( 이유정진)"
-date:   2016-05-19 14:45:59 +0900
+title:  "Welcome to Jekyll!"
+date:   2016-05-19 15:08:41 +0900
 categories: jekyll update
----
-안녕하세요 저는 이번에 컴퓨터시스템기초설계를 듣는 컴퓨터 공학부 15학번 이유정 입니다.
-저는 21살이고 96년생 쥐띠입니다.
-저는 청주에 살고 매운음식을 좋아합니다.
-이번에 컴시설을 들으면서 여러가지를 많이 배워 전공에 대한 지식의 폭이 많이 넓어지고 있다고 생각합니다.
-하지만 너무 어려워서 좀 더 열심히 노력해야겠다고 항상 느낍니다..
 
-♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥♡♥
+img: hello.jpg
+---
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
