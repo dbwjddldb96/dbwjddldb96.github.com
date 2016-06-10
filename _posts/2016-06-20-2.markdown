@@ -1,0 +1,10 @@
+﻿---
+layout: post
+title:  "Smart refrigerator"
+categories: jekyll update
+img: art3.jpg
+---
+
+#푸드 레시피 기능  
+
+냉장고 안에 재료를 고려하지 않고, 인기 레시피가 색출되어 안내
