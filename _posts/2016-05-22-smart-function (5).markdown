@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Recipe Searching Program"
 categories: jekyll update
