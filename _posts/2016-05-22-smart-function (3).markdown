@@ -10,5 +10,5 @@ img: art4.jpg
 그 재료들로 만들 수 있는 레시피 검색   
 
 검색은 
-#Open Api#
+<Open Api>
 를 이용
