@@ -1,6 +1,6 @@
-﻿---
+---
 layout: post
-title:  "Recipe Searching Program"
+title:  "Data Translate"
 categories: jekyll update
 img: art6.png
 ---
