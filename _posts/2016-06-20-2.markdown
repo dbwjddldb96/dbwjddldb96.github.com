@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Smart refrigerator"
 categories: jekyll update
