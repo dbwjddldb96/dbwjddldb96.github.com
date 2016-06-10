@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "푸드 레시피 기능"
 categories: jekyll update
