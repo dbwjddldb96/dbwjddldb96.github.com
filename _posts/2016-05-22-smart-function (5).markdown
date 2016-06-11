@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Recipe Searching Program"
+title:  "Open API"
 categories: jekyll update
 img: art6.jpg
 ---
