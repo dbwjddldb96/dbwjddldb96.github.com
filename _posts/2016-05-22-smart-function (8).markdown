@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "추가 기능"
+title:  "Smart refrigerator"
 categories: jekyll update
 img: art9.jpg
 ---
