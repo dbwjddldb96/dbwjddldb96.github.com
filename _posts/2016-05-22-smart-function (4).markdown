@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Recipe Searching Program"
+title:  "동작원리"
 categories: jekyll update
-img: art5.png
+img: art7.png
 ---
  
 
