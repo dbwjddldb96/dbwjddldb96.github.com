@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "추가 기능"
 categories: jekyll update
