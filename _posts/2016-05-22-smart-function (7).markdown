@@ -2,7 +2,7 @@
 layout: post
 title:  "추가 기능"
 categories: jekyll update
-img: art6.png
+img: art8.jpg
 ---
 
 DBMS의 장점, 북마크 기능도 추가할 수 있다.   
